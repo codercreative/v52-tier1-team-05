@@ -91,6 +91,13 @@ ul {
 
 li {
   list-style-type: none;
+  color: #4baca6;
+}
+
+.list-ul a:hover {
+  color: orange;
+  cursor: pointer;
+
 }
 
 .company-container {
@@ -108,6 +115,10 @@ li {
   height: 166px;
 }
 
+.company-h3 {
+  color: #4baca6;
+}
+
 .cta-section {
   background: rgba(26, 46, 80, 1);
   color: white;
@@ -123,10 +134,11 @@ li {
 
 
 
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;
-  padding: 0.6em 1.2em;
+
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
@@ -174,6 +186,8 @@ button:disabled {
   display: flex;
   flex-direction: column;
 }
+
+
 
 label {
   font-weight: bold;
@@ -227,4 +241,9 @@ select:focus {
 
 .zigzag-item:hover {
   transform: translateY(-5px);
+}
+
+.choose-container {
+  margin: 40px;
+  padding: 20px;
 }
