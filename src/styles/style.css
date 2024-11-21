@@ -37,10 +37,91 @@ h1 {
   line-height: 1.1;
 }
 
+
 .cta-section {
   background-color: #242424;
   color: #fff;
 }
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 80px;
+  box-sizing: border-box;
+  background-color: white;
+
+}
+
+.logo-container {
+  display: flex;
+  justify-content: flex-start;
+
+
+}
+
+
+
+.logo {
+  width: 100px;
+  padding-top: 20px;
+}
+
+.list {
+  display: flex;
+  justify-content: flex-end;
+
+}
+
+.main-h1 {
+  color: rgba(255, 144, 0, 1);
+  margin: 20px 0;
+  padding: 20px 0;
+
+}
+
+ul {
+  display: flex;
+  gap: 20px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+.company-container {
+  width: 100%;
+  display: flex;
+
+  justify-content: space-between;
+  padding: 0 80px;
+  margin: 60px 0
+}
+
+.company-div {
+
+  width: 400px;
+  height: 166px;
+}
+
+.cta-section {
+  background: rgba(26, 46, 80, 1);
+  color: white;
+  width: 100%;
+  height: auto;
+  margin: 40px;
+  padding: 40px;
+}
+
+.cta-p {
+  margin: 20px 0;
+}
+
+
 
 button {
   border-radius: 8px;
@@ -49,7 +130,7 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: rgba(255, 144, 0, 1);
   cursor: pointer;
   transition: border-color 0.25s;
 }
@@ -79,9 +160,7 @@ button:disabled {
     color: #747bff;
   }
 
-  button {
-    background-color: #f9f9f9;
-  }
+
 }
 
 /* Form Styling */
