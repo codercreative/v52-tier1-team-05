@@ -1,3 +1,7 @@
+/* Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 /* Global Reset */
 * {
   margin: 0;
@@ -6,12 +10,11 @@
 }
 
 html {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-
+  font-family: 'Roboto', sans-serif;
   text-align: center;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -22,14 +25,23 @@ html {
 body {
   display: flex;
   flex-direction: column;
-
   align-items: center;
   justify-content: center;
   align-items: center;
   min-width: 320px;
   min-height: 100vh;
+}
 
+h1,
+h2,
+h3 {
+  font-family: 'Poppins', sans-serif;
+  color: #5d5a88;
+}
 
+p {
+  color: #9795b5;
+  filter: contrast(1.2);
 }
 
 h1 {
@@ -37,10 +49,8 @@ h1 {
   line-height: 1.1;
 }
 
-
-.cta-section {
-  background-color: #242424;
-  color: #fff;
+img {
+  width: 100%;
 }
 
 header {
@@ -51,34 +61,23 @@ header {
   padding: 0 80px;
   box-sizing: border-box;
   background-color: white;
-
 }
 
 .logo-container {
   display: flex;
   justify-content: flex-start;
-
-
 }
-
-
 
 .logo {
   width: 100px;
   padding-top: 20px;
+  filter: contrast(1.2);
 }
 
 .list {
   display: flex;
   justify-content: flex-end;
-
-}
-
-.main-h1 {
-  color: rgba(255, 144, 0, 1);
-  margin: 20px 0;
-  padding: 20px 0;
-
+  font-weight: 700;
 }
 
 ul {
@@ -91,36 +90,58 @@ ul {
 
 li {
   list-style-type: none;
-  color: #4baca6;
+  color: #5d5a88;
 }
 
 .list-ul a:hover {
   color: orange;
   cursor: pointer;
-
 }
 
 .company-container {
   width: 100%;
   display: flex;
-
   justify-content: space-between;
   padding: 0 80px;
-  margin: 60px 0
+  margin: 90px 0 0;
 }
 
 .company-div {
-
   width: 400px;
-  height: 166px;
+  margin-left: 5%;
+}
+
+.main-h1 {
+  color: rgba(255, 144, 0, 1);
+  margin: 20px 0;
+  padding: 20px 0;
+  filter: contrast(1.2);
+  text-align: left;
+  margin: 0;
+  padding-bottom: 0;
 }
 
 .company-h3 {
-  color: #4baca6;
+  color: #5d5a88;
+  font-size: 1.5rem;
+  margin: 1em 0;
+  text-align: left;
 }
 
+.company-p {
+  max-width: 300px;
+  text-align: left;
+  margin-bottom: 0.8em;
+  color: #9795b5;
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+  filter: contrast(1.2);
+}
+
+/* CALL TO ACTION (CTA) SECTION */
+
 .cta-section {
-  background: rgba(26, 46, 80, 1);
+  background: #9795b5;
   color: white;
   width: 100%;
   height: auto;
@@ -128,27 +149,47 @@ li {
   padding: 40px;
 }
 
-.cta-p {
-  margin: 20px 0;
+.cta-title,
+.cta-subtitle {
+  margin: auto;
+  max-width: 550px;
 }
 
+.cta-title {
+  color: #000;
+  font-weight: 700;
+}
 
+.cta-btn,
+.appointment-btn {
+  border-radius: 40px;
+  padding: 20px;
+}
 
+.cta-subtitle {
+  font-family: 'Roboto', sans-serif;
+  color: #000;
+  width: 70%;
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+}
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-
+  border: 2px solid transparent;
+  color: #fff;
   font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
+  font-weight: 700;
   background-color: rgba(255, 144, 0, 1);
+  margin: 40px;
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: border-color 0.4s;
+  filter: contrast(1.2);
 }
 
 button:hover {
-  border-color: #646cff;
+  border: 2px solid #ff9000;
+  color: #ff9000;
+  background-color: #fff;
 }
 
 button:focus,
@@ -171,8 +212,6 @@ button:disabled {
   a:hover {
     color: #747bff;
   }
-
-
 }
 
 /* Form Styling */
@@ -187,8 +226,6 @@ button:disabled {
   flex-direction: column;
 }
 
-
-
 label {
   font-weight: bold;
   margin-bottom: 0.5em;
@@ -199,7 +236,7 @@ select,
 button {
   padding: 0.75em;
   border-radius: 5px;
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
   font-size: 1em;
 }
 
@@ -223,27 +260,52 @@ select:focus {
 }
 
 /* Memo add this code*/
-
-
+/* ZIG ZAG SECTION */
 .zigzag-section {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 150px);
   gap: 10px;
   width: 100%;
 }
 
 .zigzag-item {
+  color: #9795b5;
   padding: 1.5rem;
   border-radius: 12px;
   transition: transform 0.3s;
+  text-align: left;
+}
+
+.zigzag-item h3 {
+  font-size: 1.8rem;
+  text-align: left;
+}
+
+.zigzag-item.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .zigzag-item:hover {
   transform: translateY(-5px);
 }
 
+/* WHY CHOOSE SOLAR SECTION */
+
 .choose-container {
   margin: 40px;
   padding: 20px;
 }
+
+/* MEDIA QUERIES */
+
+@media (max-width: 768px) {
+  .zigzag-section {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+}
+
+/* Photo attributes */
+/* Photos by Vivint Solar, and .... */

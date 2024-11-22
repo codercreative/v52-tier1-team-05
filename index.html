@@ -1,208 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/styles/style.css" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./src/styles/style.css" />
+    <script type="module" src="src/js/controller.js"></script>
+    <title>SOLAR PLANNER</title>
+  </head>
 
-  <script type="module" src="src/js/controller.js"></script>
-  <title>SOLAR PLANNER</title>
-</head>
+  <body>
+    <!-- ! header (logo+photo)  -->
+    <header>
+      <div class="logo-container">
+        <!-- !  -->
+        <!-- * add logo here -->
+        <img src="/src/logo/sunvibe-logo 1.png" class="logo" />
+      </div>
+      <div class="list">
+        <ul class="list-ul">
+          <li class="list-item"><a>Home</a></li>
+          <li class="list-item"><a>Sign up</a></li>
+          <li class="list-item"><a>Admin Login</a></li>
+        </ul>
+      </div>
+    </header>
 
-<body>
-  <!-- ! header (logo+photo)  -->
-  <header>
-    <div class="logo-container">
-      <!-- !  -->
-      <!-- * add logo here -->
-      <img src="/src/logo/sunvibe-logo 1.png" class="logo" />
-    </div>
-    <div class="list">
-      <ul class="list-ul">
-        <li class="list-item"><a>Home</a></li>
-        <li class="list-item"><a>Sign up</a></li>
-        <li class="list-item"><a>Admin Login</a></li>
-      </ul>
-    </div>
+    <!-- ! company name and photo -->
+    <section class="company-container">
+      <div class="company-div">
+        <h1 class="main-h1">SunVibes</h1>
+        <h3 class="company-h3">Solar Panel Evaluation</h3>
+        <p class="company-p">
+          Empowering LA’s green future. Get a free solar evaluation for your
+          home and start saving energy!
+        </p>
+      </div>
+      <div>
+        <img />
+      </div>
+    </section>
 
-  </header>
-
-
-  <!-- ! company name and photo -->
-  <section class="company-container">
-    <div class="company-div">
-      <h1 class="main-h1">SunVibes</h1>
-      <h3 class="company-h3"><em>Panel Evaluation</em> Panel Evaluation</h3>
-      <p>
-        Empowering LA’s green future with simple solar scheduling and planning
+    <!-- ! CTA section -->
+    <section class="cta-section">
+      <h2 class="cta-title">
+        Join our solar panel program to reduce your carbon footprint and get
+        personalized energy assessments
+      </h2>
+      <button class="cta-btn">Get Your Free Solar Evaluation!</button>
+      <p class="cta-subtitle">
+        It’s simple! Fill out the form, receive a confirmation from our team,
+        and get your evaluation at your preferred timeslot. Learn more about the
+        process below.
       </p>
-    </div>
-    <div>
+    </section>
+
+    <!-- ! ZigZag section -->
+    <section>
+      <div class="zigzag-section">
+        <!-- ROW 1 -->
+        <div class="zigzag-item text">
+          <h3>Consultation & Custom Design</h3>
+          <p>
+            Personalized energy assessments based on your property’s unique
+            needs.
+          </p>
+        </div>
+        <div class="zigzag-item image">
+          <img src="src/images/vivint-solar-unsplash.jpg" alt="" />
+        </div>
+        <!-- ROW 2 -->
+        <div class="zigzag-item image">
+          <img src="src/images/vivint-solar-unsplash.jpg" alt="" />
+        </div>
+        <div class="zigzag-item text">
+          <h3>Installation & Integration</h3>
+          <p>
+            Professional installation of solar panels, battery storage, and
+            optional EV chargers, handling all permitting and compliance..
+          </p>
+        </div>
+        <!-- ROW 3 -->
+        <div class="zigzag-item text">
+          <h3>Maintenance & Monitoring</h3>
+          <p>
+            Ongoing monitoring, maintenance, and upgrades to ensure peak
+            performance, plus options for financing, leasing, and energy
+            management support.
+          </p>
+        </div>
+        <div class="zigzag-item image">
+          <img src="src/images/vivint-solar-unsplash.jpg" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ! Why Choose Solar? -->
+    <section class="choose-container">
+      <h2>Why Choose Solar</h2>
+
+      <p class="cta-p">
+        Highlighting the environmental and financial benefits of going solar:
+        reducing energy bills, saving the environment, and contributing to
+        sustainability.
+      </p>
+    </section>
+
+    <!-- ! Customer Reviews -->
+    <section>
+      <h2>Customer Reviews</h2>
+      <p>See what our customers say about us</p>
+
+      <!-- * bobby's note -->
+      <p>
+        IDEA: I was envisioning something like a "scrollable" reviews, you can
+        hit 'rightArrow' or press the "next" button to go to next review..
+        smooth transition..
+      </p>
+    </section>
+
+    <!-- ! ??? (name of section) -->
+    <section>
+      <h2>section right above footer</h2>
+
+      <!-- ! logo again -->
       <img />
-    </div>
 
-  </section>
-
-
-  <!-- ! CTA section -->
-  <section class="cta-section">
-
-
-    <p class="cta-p">
-      Join our solar panel program to reduce your carbon footprint and get
-      personalized energy assessments
-    </p>
-    <button>Get Your Free Solar Evaluation!</button>
-    <p class="cta-p">It’s simple! Fill out the form, receive a confirmation from our team, and get your evaluation at
-      your preferred
-      timeslot. Learn more about the process below.</p>
-
-
-
-    <!-- ! newAppointment form -->
-    <h2>Schedule your <strong>free</strong> evaluation</h2>
-
-    <form id="newAppointmentForm">
-
-      <!-- Full Name -->
-      <label for="fullName">Full Name</label>
-      <input type="text" id="fullName" name="fullName" placeholder="e.g., John Doe" required />
-      <div class="error-message" id="fullName-error"></div>
-
-      <!-- Email -->
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" placeholder="e.g., johndoe@example.com" required />
-      <div class="error-message" id="email-error"></div>
-
-      <!-- Street Address -->
-      <label for="streetAddress">Street Address</label>
-      <input type="text" id="streetAddress" name="streetAddress" placeholder="e.g., 123 Main St, Apt 4B" required />
-      <div class="error-message" id="streetAddress-error"></div>
-
-      <!-- City -->
-      <label for="city">City</label>
-      <input type="text" id="city" name="city" placeholder="e.g., Los Angeles" required />
-      <div class="error-message" id="city-error"></div>
-
-      <!-- Zip Code -->
-      <label for="zipCode">Zip Code</label>
-      <input type="text" id="zipCode" name="zipCode" placeholder="e.g., 90001" required />
-      <div class="error-message" id="zipCode-error"></div>
-
-      <!-- Appointment Date -->
-      <label for="aptDate">When?</label>
-      <input type="date" id="aptDate" name="aptDate" required />
-      <div class="error-message" id="aptDate-error"></div>
-
-      <!-- Appointment Timeslot -->
-      <label for="aptTimeslot">Will be home between</label>
-      <select id="aptTimeslot" name="aptTimeslot" required>
-        <option value="" disabled selected>Select a timeslot</option>
-        <option value="7AM-9AM">7 AM - 9 AM</option>
-        <option value="9AM-11AM">9 AM - 11 AM</option>
-        <option value="11AM-1PM">11 AM - 1 PM</option>
-        <option value="1PM-3PM">1 PM - 3 PM</option>
-        <option value="3PM-5PM">3 PM - 5 PM</option>
-        <option value="5PM-7PM">5 PM - 7 PM</option>
-      </select>
-      <div class="error-message" id="aptTimeslot-error"></div>
-
-      <button type="submit">Submit</button>
-    </form>
-  </section>
-
-  <!-- ! ZigZag section -->
-  <section>
-    <h2 class="class=" zigzag-section"></h2>
-
-    <!-- * container text photos (to be a css grid )  -->
-    <div class="zigzag-section">
-      <div class="zigzag-item">
-        <h3>Consultation & Custom Design</h3>
-        <p>
-          Personalized energy assessments based on your property’s unique needs.
-        </p>
-
+      <!-- ! container for Company, Support and Follow -->
+      <div>
+        <div>company</div>
+        <div>support</div>
+        <div>follow</div>
       </div>
-      <div class="zigzag-item">
-        <img />
 
-      </div>
-      <div class="zigzag-item">
-        <img />
-      </div>
-      <div class="zigzag-item">
-        <h3>Installation & Integration</h3>
-        <p>
-          Professional installation of solar panels, battery storage, and
-          optional EV chargers, handling all permitting and compliance..
-        </p>
+      <!-- ! another CTA button -->
+      <button class="appointment-btn">Schedule Appointment</button>
+      <!-- * bobby's note -->
+      <p>
+        We can leave these social media links empty (on the very right) but
+        still have them on the page 'cause we can use icons and make it look
+        nice!
+      </p>
+    </section>
 
-      </div>
-      <div class="zigzag-item">
-        <h3>Maintenance & Monitoring</h3>
-        <p>
-          Ongoing monitoring, maintenance, and upgrades to ensure peak
-          performance, plus options for financing, leasing, and energy
-          management support.
-        </p>
-      </div>
-      <div class="zigzag-item">
-        <img />
-      </div>
-    </div>
-  </section>
-
-  <!-- ! Why Choose Solar? -->
-  <section class="choose-container">
-    <h2>Why Choose Solar</h2>
-
-    <p class="cta-p ">
-      Highlighting the environmental and financial benefits of going solar:
-      reducing energy bills, saving the environment, and contributing to
-      sustainability.
-    </p>
-  </section>
-
-  <!-- ! Customer Reviews -->
-  <section>
-    <h2>Customer Reviews</h2>
-    <p> See what our customers say about us</p>
-
-    <!-- * bobby's note -->
-    <p>
-      IDEA: I was envisioning something like a "scrollable" reviews, you can
-      hit 'rightArrow' or press the "next" button to go to next review..
-      smooth transition..
-    </p>
-  </section>
-
-  <!-- ! ??? (name of section) -->
-  <section>
-    <h2>section right above footer</h2>
-
-    <!-- ! logo again -->
-    <img />
-
-    <!-- ! container for Company, Support and Follow -->
-    <div>
-      <div>company</div>
-      <div>support</div>
-      <div>follow</div>
-    </div>
-
-    <!-- ! another CTA button -->
-    <button>SCHEDULE APPOINTMENT</button>
-    <!-- * bobby's note -->
-    <p>
-      We can leave these social media links empty (on the very right) but
-      still have them on the page 'cause we can use icons and make it look
-      nice!
-    </p>
-  </section>
-
-  <footer>Copyright © 2024 by Team 5</footer>
-</body>
-
+    <footer>Copyright © 2024 by Team 5</footer>
+  </body>
 </html>
+
+<!-- <h2>Schedule your <strong>free</strong> evaluation</h2>
+
+<form id="newAppointmentForm">
+
+  
+  <label for="fullName">Full Name</label>
+  <input type="text" id="fullName" name="fullName" placeholder="e.g., John Doe" required />
+  <div class="error-message" id="fullName-error"></div>
+
+ 
+  <label for="email">Email</label>
+  <input type="email" id="email" name="email" placeholder="e.g., johndoe@example.com" required />
+  <div class="error-message" id="email-error"></div>
+
+  
+  <label for="streetAddress">Street Address</label>
+  <input type="text" id="streetAddress" name="streetAddress" placeholder="e.g., 123 Main St, Apt 4B" required />
+  <div class="error-message" id="streetAddress-error"></div>
+
+  
+  <label for="city">City</label>
+  <input type="text" id="city" name="city" placeholder="e.g., Los Angeles" required />
+  <div class="error-message" id="city-error"></div>
+
+
+  <label for="zipCode">Zip Code</label>
+  <input type="text" id="zipCode" name="zipCode" placeholder="e.g., 90001" required />
+  <div class="error-message" id="zipCode-error"></div>
+
+ 
+  <label for="aptDate">When?</label>
+  <input type="date" id="aptDate" name="aptDate" required />
+  <div class="error-message" id="aptDate-error"></div>
+
+ 
+  <label for="aptTimeslot">Will be home between</label>
+  <select id="aptTimeslot" name="aptTimeslot" required>
+    <option value="" disabled selected>Select a timeslot</option>
+    <option value="7AM-9AM">7 AM - 9 AM</option>
+    <option value="9AM-11AM">9 AM - 11 AM</option>
+    <option value="11AM-1PM">11 AM - 1 PM</option>
+    <option value="1PM-3PM">1 PM - 3 PM</option>
+    <option value="3PM-5PM">3 PM - 5 PM</option>
+    <option value="5PM-7PM">5 PM - 7 PM</option>
+  </select>
+  <div class="error-message" id="aptTimeslot-error"></div>
+
+  <button type="submit">Submit</button>
+</form> -->
