@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 /* Global Reset */
+/* ! GENERAL STYLES - REUSABLE */
 * {
   margin: 0;
   padding: 0;
@@ -35,7 +36,6 @@ body {
 h1,
 h2,
 h3 {
-  font-family: 'Poppins', sans-serif;
   color: #5d5a88;
 }
 
@@ -49,9 +49,57 @@ h1 {
   line-height: 1.1;
 }
 
-img {
-  width: 100%;
+button {
+  border-radius: 8px;
+  border: 5px solid chocolate;
+
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: rgba(255, 144, 0, 1);
+  cursor: pointer;
+  transition: border-color 0.25s;
 }
+
+button:hover {
+  border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+input,
+select,
+button {
+  padding: 0.75em;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+}
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
 header {
   width: 100%;
@@ -80,6 +128,42 @@ header {
   font-weight: 700;
 }
 
+.header-nav-container {
+  display: flex;
+  justify-content: flex-end;
+}
+/* ! COMPANY SECTION */
+.company-container {
+  width: 100%;
+  display: flex;
+
+  justify-content: space-between;
+  padding: 0 80px;
+  margin: 60px 0;
+}
+
+.company-div {
+  width: 400px;
+  height: 166px;
+}
+
+.company-h3 {
+  color: #4baca6;
+}
+
+/* ! CTA SECTION */
+
+.cta-section {
+  background-color: #242424;
+  color: #fff;
+}
+
+.main-h1 {
+  color: rgba(255, 144, 0, 1);
+  margin: 20px 0;
+  padding: 20px 0;
+}
+
 ul {
   display: flex;
   gap: 20px;
@@ -103,14 +187,13 @@ li {
   display: flex;
   justify-content: space-between;
   padding: 0 80px;
-  margin: 90px 0 0;
+  margin: 60px 0;
 }
 
 .company-div {
   width: 400px;
   margin-left: 5%;
 }
-
 .main-h1 {
   color: rgba(255, 144, 0, 1);
   margin: 20px 0;
@@ -154,7 +237,6 @@ li {
   margin: auto;
   max-width: 550px;
 }
-
 .cta-title {
   color: #000;
   font-weight: 700;
@@ -175,21 +257,19 @@ li {
 }
 
 button {
-  border: 2px solid transparent;
-  color: #fff;
+  border-radius: 8px;
+  border: 1px solid transparent;
+
   font-size: 1em;
-  font-weight: 700;
+  font-weight: 500;
+  font-family: inherit;
   background-color: rgba(255, 144, 0, 1);
-  margin: 40px;
   cursor: pointer;
-  transition: border-color 0.4s;
-  filter: contrast(1.2);
+  transition: border-color 0.25s;
 }
 
 button:hover {
-  border: 2px solid #ff9000;
-  color: #ff9000;
-  background-color: #fff;
+  border-color: #646cff;
 }
 
 button:focus,
@@ -214,51 +294,147 @@ button:disabled {
   }
 }
 
-/* Form Styling */
-#newAppointmentForm {
-  background-color: teal;
-  padding: 2em;
-  border-radius: 10px;
-  /* width: 100%; */
-  max-width: 600px;
-  /* Makes the form a bit more wide */
-  display: flex;
-  flex-direction: column;
+/* * FORM  */
+/* Overlay for the modal */
+.form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8); /* Slightly darker background */
+  backdrop-filter: blur(6px); /* Enhanced blur */
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
 }
 
-label {
+/* Form Title */
+.form-title {
+  font-size: 1.8rem;
   font-weight: bold;
-  margin-bottom: 0.5em;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
 }
 
-input,
-select,
-button {
-  padding: 0.75em;
-  border-radius: 5px;
-  /* border: 1px solid #ccc; */
-  font-size: 1em;
+/* Modal form styling */
+.newAppointmentForm {
+  /* background-color: #1b1b5a; */
+  background-color: rgba(26, 46, 80, 1);
+  /* background-color: #213547; */
+
+  padding: 1.8rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  max-width: 600px;
+  width: 90%;
+  display: flex;
+  gap: 0.1rem;
+  flex-direction: column;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth animations */
+}
+
+/* Hidden state with opacity and visibility */
+.hidden {
+  opacity: 0;
+  pointer-events: none; /* Prevent interaction */
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0s 0.5s; /* Smooth transition */
+}
+
+/* Visible state */
+.visible {
+  opacity: 1;
+  pointer-events: auto; /* Allow interactions */
+  visibility: visible;
+  transition: opacity 0.5s ease; /* Smooth transition */
+}
+
+/* Input fields */
+.newAppointmentForm input,
+.newAppointmentForm select,
+.newAppointmentForm option {
+  width: 60%;
+  min-width: 60%;
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #333; /* Light gray for inputs */
+  color: #f1f3f5; /* Darker text for readability */
+  transition: all 0.3s ease;
+}
+
+.newAppointmentForm button {
+  background-color: rgba(255, 144, 0, 1);
+  color: white;
+  border: none;
+
+  font-size: 1.3rem;
+  padding: 10px 20px;
+  letter-spacing: 1.1;
+  cursor: pointer;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-top: 1.5rem;
+}
+
+/* Custom styles for the confirmation notification */
+.notyf-confirmation {
+  min-width: 80%;
+  min-height: 50%;
+  background-color: rgba(255, 144, 0, 1) !important;
+  padding: 20px 30px;
+  border-radius: 8px;
+  font-size: 1rem; /* Adjust font size */
+}
+
+.notyf-confirmation .notyf__icon {
+  font-size: 1rem;
+  margin-right: 10px;
+}
+
+.notyf-confirmation .notyf__message {
+  font-size: 3rem; /* Larger font size for the message */
+  font-weight: 900;
+  color: white;
 }
 
 input:focus,
 select:focus {
   border-color: #646cff;
 }
-
+/* Custom Error Styling */
 .error-message {
   color: red;
   font-size: 0.9em;
   margin-top: 5px;
+  font-weight: bold;
 }
 
 .is-invalid {
-  border-color: red;
+  border-color: red; /* Red border when invalid */
 }
 
-.is-invalid-label {
-  color: red;
+.is-label-invalid {
+  color: red; /* Red text for labels with errors */
 }
 
+/* Tooltip for JustValidate */
+
+.just-validate-error-label {
+  background-color: yellow; /* Tooltip color */
+  color: red; /* Tooltip text color */
+}
 /* Memo add this code*/
 /* ZIG ZAG SECTION */
 .zigzag-section {

@@ -1,8 +1,9 @@
 node_modules
 dist
 .parcel-cache
-# for bobby only 
-cityData
+
+./src/large_file.json
+src/*.json
 
 # Logs
 logs
